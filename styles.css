@@ -263,6 +263,22 @@ p {
   display: block;
 }
 
+/* ─── SITE HEADER (prominent logo) ──────────────────────────── */
+.site-header {
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--divider);
+  padding: var(--space-md) var(--section-pad-h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo {
+  height: auto;
+  width: clamp(160px, 25vw, 260px);
+  display: block;
+}
+
 /* ─── NAVIGATION ─────────────────────────────────────────────── */
 .site-nav {
   position: sticky;
@@ -349,15 +365,17 @@ p {
   max-width: var(--max-width);
   margin-inline: auto;
   padding-inline: var(--section-pad-h);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  min-height: 82vh;
+  text-align: center;
+  min-height: 60vh;
+  justify-content: center;
+  padding-block: var(--space-xl);
 }
 
 .hero-text {
-  padding-block: var(--space-lg);
+  max-width: 680px;
 }
 
 .hero-byline {
@@ -379,8 +397,9 @@ p {
   font-size: 1.125rem;
   color: var(--charcoal-light);
   line-height: 1.75;
-  max-width: 50ch;
+  max-width: 52ch;
   margin-bottom: var(--space-lg);
+  margin-inline: auto;
 }
 
 .hero-ctas {
@@ -388,19 +407,7 @@ p {
   flex-wrap: wrap;
   gap: var(--space-sm);
   align-items: center;
-}
-
-.hero-image-wrap {
-  display: flex;
-  align-items: stretch;
-  align-self: stretch;
-}
-
-.hero-portrait {
-  width: 100%;
-  min-height: 540px;
-  max-height: 700px;
-  flex: 1;
+  justify-content: center;
 }
 
 .hero-divider {
@@ -703,25 +710,13 @@ p {
   }
 
   .hero-inner {
-    grid-template-columns: 1fr;
     gap: var(--space-md);
-    min-height: auto;
+    min-height: 50vh;
     padding-top: var(--space-lg);
   }
 
   .hero-text {
     padding-block: 0;
-    order: 1;
-  }
-
-  .hero-image-wrap {
-    order: 0;
-    width: 100%;
-  }
-
-  .hero-portrait {
-    min-height: 360px;
-    max-height: 460px;
   }
 
   .hero-sub {
@@ -815,11 +810,6 @@ p {
 
   .hero {
     padding-top: var(--space-lg);
-  }
-
-  .hero-portrait {
-    min-height: 280px;
-    max-height: 360px;
   }
 
   .hero-ctas {
