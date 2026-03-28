@@ -285,12 +285,15 @@ p {
 }
 
 .nav-logo {
-  font-family: var(--font-heading);
-  font-size: 1.1875rem;
-  font-weight: 500;
-  color: var(--brown-deep);
-  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
