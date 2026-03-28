@@ -263,22 +263,6 @@ p {
   display: block;
 }
 
-/* ─── SITE HEADER (prominent logo) ──────────────────────────── */
-.site-header {
-  background-color: var(--cream);
-  border-bottom: 1px solid var(--divider);
-  padding: var(--space-md) var(--section-pad-h);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.site-logo {
-  height: auto;
-  width: clamp(160px, 25vw, 260px);
-  display: block;
-}
-
 /* ─── NAVIGATION ─────────────────────────────────────────────── */
 .site-nav {
   position: sticky;
